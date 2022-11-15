@@ -29,7 +29,8 @@ public class RouteConfig {
                 .route( "identity-provider",
                         p -> p.path( "/ngotGateway/identity-provider/**" )
                               .filters(f -> f.rewritePath( "/ngotGateway/identity-provider/(?<segment>.*)",
-                                                           "/dev-keycloak/auth/realms/ALMA/${segment}" ))
+//                                                         "/dev-keycloak/auth/realms/ALMA/${segment}" ))
+                                                           "/dev-keycloak/${segment}" ))
                                              .uri( "https://www.eso.org" ))
 
 //                .route( "book2", p -> p
